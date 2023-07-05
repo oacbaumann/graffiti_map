@@ -254,7 +254,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
 
           // Create fly-to symbol
           var fly_to_symbol = document.createElement('img');
-          fly_to_symbol.src = "/icons/zoom_to_symbol.svg";
+          fly_to_symbol.src = "../icons/zoom_to_symbol.svg";
           fly_to_symbol.classList.add('fly_to_symbol');
           fly_to_symbol.textContent = "Fly to";
           graffiti_info_interaction.appendChild(fly_to_symbol);
@@ -768,7 +768,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
 
     switch (selectedBasemap) {
       case 'standard':
-        basemap_menu_icon.style.backgroundImage = "url('/icons/color_icon.png')";
+        basemap_menu_icon.style.backgroundImage = "url('../icons/color_icon.png')";
         document.getElementById("feature-number").innerText = "Loading..";
         clear_graffiti_layers();
         clear_graffiti_info();
@@ -787,7 +787,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
         });
         break;
       case 'aerial':
-        basemap_menu_icon.style.backgroundImage = "url('/icons/aerial_icon.png')";
+        basemap_menu_icon.style.backgroundImage = "url('../icons/aerial_icon.png')";
         document.getElementById("feature-number").innerText = "Loading..";
         clear_graffiti_layers();
         clear_graffiti_info();
@@ -806,7 +806,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
         });
         break;
       case 'grey':
-        basemap_menu_icon.style.backgroundImage = "url('/icons/grey_icon.png')";
+        basemap_menu_icon.style.backgroundImage = "url('../icons/grey_icon.png')";
         document.getElementById("feature-number").innerText = "Loading..";
         clear_graffiti_layers();
         clear_graffiti_info();
@@ -825,7 +825,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
         });
         break;
       case 'osm':
-        basemap_menu_icon.style.backgroundImage = "url('/icons/osm_icon.png')";
+        basemap_menu_icon.style.backgroundImage = "url('../icons/osm_icon.png')";
         document.getElementById("feature-number").innerText = "Loading..";
         clear_graffiti_layers();
         clear_graffiti_info();
