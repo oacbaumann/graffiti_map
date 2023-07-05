@@ -118,7 +118,7 @@
     cursor: pointer;
     width: 4em;
     height: 4em;
-    background-image: url('icons/grey_icon.png');
+    background-image: url('../icons/grey_icon.png');
     background-size: cover;
     outline: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 20%;
@@ -188,17 +188,17 @@
   }
 
   #standard::before {
-    background-image: url('icons/color_icon.png');
+    background-image: url('../icons/color_icon.png');
     background-size: cover;
   }
 
   #grey::before {
-    background-image: url('/icons/grey_icon.png');
+    background-image: url('../icons/grey_icon.png');
     background-size: cover;
   }
 
   #aerial::before {
-    background-image: url('./icons/aerial_icon.png');
+    background-image: url('../icons/aerial_icon.png');
     background-size: cover;
   }
 
