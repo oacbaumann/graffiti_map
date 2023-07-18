@@ -362,21 +362,15 @@ document.getElementById("filterButton").addEventListener("click", function () {
                 'line-color': [
                   'case',
                   ['boolean', ['feature-state', 'hover'], false],
-                  '#f1881f', // hover color
-                  "#d2145c"
+                  '#f1881f', // Hover color
+                  "#d2145c" // Non-hover color
                 ],
                 'line-width': [
                   'interpolate',
                   ['linear'],
                   ['zoom'],
-                  0, 100, // Line width for zoom level 0 (or any desired starting zoom level)
-                  15, [
-                    'case',
-                    ['boolean', ['feature-state', 'hover'], false],
-                    10, // Line width when hovering
-                    5 // Line width for non-hover state
-                  ],
-                  20, 3 // Line width for zoom level 20 (or any desired maximum zoom level)
+                  0, ['case', ['boolean', ['feature-state', 'hover'], false], ['*', 1, 14], 14],
+                  20, ['case', ['boolean', ['feature-state', 'hover'], false], ['*', 2, 4], 4]
                 ],
               },
               minzoom: 15,
@@ -1253,7 +1247,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
   map.on('mousemove', function (e) {
     if (map.isStyleLoaded() && map.loaded()) {
 
-      if (map.getZoom() < 18 && !is_3D_enabled) {
+      if (map.getZoom() < 19 && !is_3D_enabled) {
         var features = map.queryRenderedFeatures(e.point, { layers: graffiti_line_layers_on_display });
       }
       else {
@@ -1265,8 +1259,6 @@ document.getElementById("filterButton").addEventListener("click", function () {
         // Get the ID of the feature that the mouse is currently over
         map.getCanvas().style.cursor = 'pointer';
         hovered_featureId = features[0].id;
-
-
 
 
         map.setFeatureState(
@@ -1287,9 +1279,6 @@ document.getElementById("filterButton").addEventListener("click", function () {
           var sidebar_toggle_button = document.getElementById("sidebar_toggle_button")
           sidebar_toggle_button.classList.add('hovered_sidebar');
         }
-
-
-
 
 
 
